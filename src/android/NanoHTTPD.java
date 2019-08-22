@@ -93,7 +93,7 @@ public class NanoHTTPD
 	@SuppressWarnings("rawtypes")
 	public Response serve( String uri, String method, Properties header, Properties parms, Properties files )
 	{
-		Log.i( LOGTAG, method + " '" + uri + "' " );
+		//Log.i( LOGTAG, method + " '" + uri + "' " );
 /*
 		Enumeration e = header.propertyNames();
 		while ( e.hasMoreElements())
@@ -1093,6 +1093,8 @@ public class NanoHTTPD
 		}
 
 		res.addHeader( "Accept-Ranges", "bytes"); // Announce that the file server accepts partial content requestes
+
+		res.addHeader("Access-Control-Allow-Origin", "*"); // Add CORs header
 		return res;
 	}
 

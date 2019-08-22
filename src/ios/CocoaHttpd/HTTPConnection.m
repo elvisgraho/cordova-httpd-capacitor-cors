@@ -1931,7 +1931,10 @@ static NSMutableArray *recentNonces;
 	// Add standard headers
 	NSString *now = [self dateAsString:[NSDate date]];
 	[response setHeaderField:@"Date" value:now];
-	
+
+	// HACK: add universal CORS header
+	[response setHeaderField:@"Access-Control-Allow-Origin" value:@"capacitor://localhost"];
+
 	// Add server capability headers
 	[response setHeaderField:@"Accept-Ranges" value:@"bytes"];
 	
@@ -1984,7 +1987,10 @@ static NSMutableArray *recentNonces;
 	// Add standard headers
 	NSString *now = [self dateAsString:[NSDate date]];
 	[response setHeaderField:@"Date" value:now];
-	
+
+	// HACK: add universal CORS header
+	[response setHeaderField:@"Access-Control-Allow-Origin" value:@"capacitor://localhost"];
+
 	// Add server capability headers
 	[response setHeaderField:@"Accept-Ranges" value:@"bytes"];
 	
