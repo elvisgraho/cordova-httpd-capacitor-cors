@@ -1933,7 +1933,7 @@ static NSMutableArray *recentNonces;
 	[response setHeaderField:@"Date" value:now];
 
 	// HACK: add universal CORS header
-	[response setHeaderField:@"Access-Control-Allow-Origin" value:@"capacitor://localhost"];
+	[response setHeaderField:@"Access-Control-Allow-Origin" value:@"*"];
 
 	// Add server capability headers
 	[response setHeaderField:@"Accept-Ranges" value:@"bytes"];
@@ -1989,7 +1989,7 @@ static NSMutableArray *recentNonces;
 	[response setHeaderField:@"Date" value:now];
 
 	// HACK: add universal CORS header
-	[response setHeaderField:@"Access-Control-Allow-Origin" value:@"capacitor://localhost"];
+	[response setHeaderField:@"Access-Control-Allow-Origin" value:@"*"];
 
 	// Add server capability headers
 	[response setHeaderField:@"Accept-Ranges" value:@"bytes"];
