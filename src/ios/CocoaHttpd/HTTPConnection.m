@@ -1934,6 +1934,7 @@ static NSMutableArray *recentNonces;
 
 	// HACK: add universal CORS header
 	[response setHeaderField:@"Access-Control-Allow-Origin" value:@"*"];
+	[response setHeaderField:@"Cache-Control" value:@"no-cache"];
 
 	// Add server capability headers
 	[response setHeaderField:@"Accept-Ranges" value:@"bytes"];
@@ -1990,6 +1991,7 @@ static NSMutableArray *recentNonces;
 
 	// HACK: add universal CORS header
 	[response setHeaderField:@"Access-Control-Allow-Origin" value:@"*"];
+	[response setHeaderField:@"Cache-Control" value:@"no-cache"];
 
 	// Add server capability headers
 	[response setHeaderField:@"Accept-Ranges" value:@"bytes"];
